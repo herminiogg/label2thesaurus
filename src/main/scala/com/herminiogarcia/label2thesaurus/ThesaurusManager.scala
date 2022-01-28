@@ -1,6 +1,6 @@
 package com.herminiogarcia.label2thesaurus
 
-import com.github.vickumar1981.stringdistance.ArrayDistance.Levenshtein
+import com.github.vickumar1981.stringdistance.StringDistance.Levenshtein
 import org.apache.jena.query.{QueryExecutionFactory, QueryFactory}
 import org.apache.jena.rdf.model.Model
 import org.apache.jena.riot.RDFDataMgr
@@ -9,13 +9,6 @@ import java.net.{URI, URL}
 import scala.collection.mutable
 
 class ThesaurusManager(thesaurusURL: URL) {
-
-  /**private def downloadThesaurus(): String = {
-    val buffer = io.Source.fromURL(thesaurusURL)
-    val result = buffer.mkString
-    buffer.close()
-    result
-  }*/
 
   private def chargeThesaurusAsModel(): Model = {
     RDFDataMgr.loadModel(thesaurusURL.toString)
@@ -29,7 +22,7 @@ class ThesaurusManager(thesaurusURL: URL) {
   }
 
   private def calculateLevenshteinDistance(label: String, itemLabel: String): Int = {
-    Levenshtein.distance(label.toCharArray, itemLabel.toCharArray)
+    Levenshtein.distance(label, itemLabel)
   }
 
   def lookForLabel(label: String, maxThreshold: Int): List[ThesaurusLabelLookupResult] = {
