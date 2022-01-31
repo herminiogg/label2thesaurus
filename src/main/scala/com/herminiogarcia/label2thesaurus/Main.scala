@@ -31,10 +31,14 @@ class Main extends Callable[Int] {
   @Option(names = Array("-o", "--output"), description = Array("Path where to generate the output files"))
   private var outputPath: String = ""
 
+  @Option(names = Array("-cs", "--casesensitive"), description = Array("Use case sensitive comparison"))
+  private var caseSensitive: Boolean = false
+
+
   override def call(): Int = {
     val thesauri = new FileHandler(thesauriPath).splitByLine().map(new URL(_))
     val labels = new FileHandler(labelsPath).splitByLine()
-    val results = new Reconciler(threshold).reconcile(labels.toList, thesauri.toList)
+    val results = new Reconciler(threshold, caseSensitive).reconcile(labels.toList, thesauri.toList)
     val printer = new ReconcilerResultsPrinter(results)
     if(outputPath.isEmpty)
       printer.toSysOut()

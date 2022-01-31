@@ -8,7 +8,7 @@ import org.apache.jena.riot.RDFDataMgr
 import java.net.{URI, URL}
 import scala.collection.mutable
 
-class ThesaurusManager(thesaurusURL: URL) {
+class ThesaurusManager(thesaurusURL: URL, caseSensitive: Boolean) {
 
   private def chargeThesaurusAsModel(): Model = {
     RDFDataMgr.loadModel(thesaurusURL.toString)
@@ -22,7 +22,9 @@ class ThesaurusManager(thesaurusURL: URL) {
   }
 
   private def calculateLevenshteinDistance(label: String, itemLabel: String): Int = {
-    Levenshtein.distance(label, itemLabel)
+    val labelFinalValue = if(!caseSensitive) label.toLowerCase else label
+    val itemLabelFinalValue = if(!caseSensitive) itemLabel.toLowerCase else itemLabel
+    Levenshtein.distance(labelFinalValue, itemLabelFinalValue)
   }
 
   def lookForLabel(label: String, maxThreshold: Int): List[ThesaurusLabelLookupResult] = {
