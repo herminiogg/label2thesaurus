@@ -5,10 +5,10 @@ import java.net.{URI, URL}
 
 class Reconciler(maxThreshold: Int, caseSensitive: Boolean) {
 
-  def reconcile(labels: List[String], thesaurus: List[URL]): List[ReconcilerResult] = {
+  def reconcile(labels: List[String], thesaurus: List[URL], alternativePredicates: Option[String]): List[ReconcilerResult] = {
     labels.flatMap(label => {
       thesaurus.flatMap(th => {
-        val results = new ThesaurusManager(th, caseSensitive).lookForLabel(label, maxThreshold)
+        val results = new ThesaurusManager(th, caseSensitive, alternativePredicates).lookForLabel(label, maxThreshold)
         results.map(r => new ReconcilerResult(label, r.term, r.termLabel, r.lang, r.confidence))
       })
     })

@@ -8,7 +8,7 @@ import org.apache.jena.riot.RDFDataMgr
 import java.net.{URI, URL}
 import scala.collection.mutable
 
-class ThesaurusManager(thesaurusURL: URL, caseSensitive: Boolean) {
+class ThesaurusManager(thesaurusURL: URL, caseSensitive: Boolean, alternativePredicates: Option[String]) {
 
   private def chargeThesaurusAsModel(): Model = {
     RDFDataMgr.loadModel(thesaurusURL.toString)
@@ -29,7 +29,10 @@ class ThesaurusManager(thesaurusURL: URL, caseSensitive: Boolean) {
 
   def lookForLabel(label: String, maxThreshold: Int): List[ThesaurusLabelLookupResult] = {
     val model = chargeThesaurusAsModel()
-    val sparql = loadFromResources("getAllLabels.sparql")
+    val sparqlResource = loadFromResources("getAllLabels.sparql")
+    val sparql =
+      if(alternativePredicates.isDefined) sparqlResource.replace("$predicates", alternativePredicates.get)
+      else sparqlResource.replace("$predicates", "skos:prefLabel|skos:altLabel")
     val query = QueryFactory.create(sparql)
     val queryExecution = QueryExecutionFactory.create(query, model)
     val resultSet = queryExecution.execSelect()
