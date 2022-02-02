@@ -34,11 +34,16 @@ class Main extends Callable[Int] {
   @Option(names = Array("-cs", "--casesensitive"), description = Array("Use case sensitive comparison"))
   private var caseSensitive: Boolean = false
 
+  @Option(names = Array("-p", "--predicates"), description = Array("Alternative predicates to look for the labels in the generated KG. Syntax example and default: skos:prefLabel|skos:altLabel." +
+    "Take into account that only rdfs, skos, dcterms, dc and foaf namespaces are included, so to include another namespace predicate you must provide it with the full IRI syntax, e.g.: <http://xmlns.com/foaf/0.1/>"))
+  private var alternativePredicates: String = ""
+
 
   override def call(): Int = {
     val thesauri = new FileHandler(thesauriPath).splitByLine().map(new URL(_))
     val labels = new FileHandler(labelsPath).splitByLine()
-    val results = new Reconciler(threshold, caseSensitive).reconcile(labels.toList, thesauri.toList)
+    val alternativePredicatesOption = if(alternativePredicates.isEmpty) None else scala.Option(alternativePredicates)
+    val results = new Reconciler(threshold, caseSensitive).reconcile(labels.toList, thesauri.toList, alternativePredicatesOption)
     val printer = new ReconcilerResultsPrinter(results)
     if(outputPath.isEmpty)
       printer.toSysOut()
