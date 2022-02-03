@@ -38,12 +38,16 @@ class Main extends Callable[Int] {
     "Take into account that only rdfs, skos, dcterms, dc and foaf namespaces are included, so to include another namespace predicate you must provide it with the full IRI syntax, e.g.: <http://xmlns.com/foaf/0.1/>"))
   private var alternativePredicates: String = ""
 
+  @Option(names = Array("-d", "--distance"), description = Array("Algorithm to use for the distance calculation. Available: Levenshtein, Damerau-Levenshtein, Hamming, LongestCommonSubsequence. Default: Levenshtein "))
+  private var distanceCalculation: String = ""
+
 
   override def call(): Int = {
     val thesauri = new FileHandler(thesauriPath).splitByLine().map(new URL(_))
     val labels = new FileHandler(labelsPath).splitByLine()
     val alternativePredicatesOption = if(alternativePredicates.isEmpty) None else scala.Option(alternativePredicates)
-    val results = new Reconciler(threshold, caseSensitive).reconcile(labels.toList, thesauri.toList, alternativePredicatesOption)
+    val distanceAlgorithm = if(distanceCalculation.isEmpty) None else scala.Option(distanceCalculation)
+    val results = new Reconciler(threshold, caseSensitive, distanceAlgorithm).reconcile(labels.toList, thesauri.toList, alternativePredicatesOption)
     val printer = new ReconcilerResultsPrinter(results)
     if(outputPath.isEmpty)
       printer.toSysOut()
