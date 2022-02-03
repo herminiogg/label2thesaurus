@@ -1,6 +1,6 @@
 package com.herminiogarcia.label2thesaurus
 
-import com.github.vickumar1981.stringdistance.StringDistance.Levenshtein
+import com.herminiogarcia.label2thesaurus.distance.DistanceCalculator
 import org.apache.jena.query.{QueryExecutionFactory, QueryFactory}
 import org.apache.jena.rdf.model.Model
 import org.apache.jena.riot.RDFDataMgr
@@ -8,7 +8,7 @@ import org.apache.jena.riot.RDFDataMgr
 import java.net.{URI, URL}
 import scala.collection.mutable
 
-class ThesaurusManager(thesaurusURL: URL, caseSensitive: Boolean, alternativePredicates: Option[String]) {
+class ThesaurusManager(thesaurusURL: URL, alternativePredicates: Option[String], distanceCalculator: DistanceCalculator) {
 
   private def chargeThesaurusAsModel(): Model = {
     RDFDataMgr.loadModel(thesaurusURL.toString)
@@ -19,12 +19,6 @@ class ThesaurusManager(thesaurusURL: URL, caseSensitive: Boolean, alternativePre
     val content = file.mkString
     file.close()
     content
-  }
-
-  private def calculateLevenshteinDistance(label: String, itemLabel: String): Int = {
-    val labelFinalValue = if(!caseSensitive) label.toLowerCase else label
-    val itemLabelFinalValue = if(!caseSensitive) itemLabel.toLowerCase else itemLabel
-    Levenshtein.distance(labelFinalValue, itemLabelFinalValue)
   }
 
   def lookForLabel(label: String, maxThreshold: Int): List[ThesaurusLabelLookupResult] = {
@@ -45,9 +39,8 @@ class ThesaurusManager(thesaurusURL: URL, caseSensitive: Boolean, alternativePre
         if(itemLabelResource.isLiteral) itemLabelResource.asLiteral().getString
         else itemLabelResource.asResource().getURI
       val itemLanguage = if(itemLabelResource.isLiteral) itemLabelResource.asLiteral().getLanguage else ""
-      val distance = calculateLevenshteinDistance(label, itemLabel)
-      if(distance < maxThreshold) {
-        val confidence = (maxThreshold - distance) / maxThreshold.toDouble * 100.0
+      if(distanceCalculator.toBeFiltered(label, itemLabel, maxThreshold)) {
+        val confidence = distanceCalculator.calculateConfidence(label, itemLabel, maxThreshold)
         results += new ThesaurusLabelLookupResult(URI.create(item), itemLabel, itemLanguage, confidence)
       }
     }
