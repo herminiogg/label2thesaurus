@@ -1,6 +1,6 @@
-package com.herminiogarcia.label2thesaurus
+package com.herminiogarcia.label2thesaurus.io
 
-import com.herminiogarcia.label2thesaurus.distance.DistanceCalculator
+import com.herminiogarcia.label2thesaurus.distance.DistanceOrScoreCalculator
 import org.apache.jena.query.{QueryExecutionFactory, QueryFactory}
 import org.apache.jena.rdf.model.Model
 import org.apache.jena.riot.RDFDataMgr
@@ -8,7 +8,7 @@ import org.apache.jena.riot.RDFDataMgr
 import java.net.{URI, URL}
 import scala.collection.mutable
 
-class ThesaurusManager(thesaurusURL: URL, alternativePredicates: Option[String], distanceCalculator: DistanceCalculator) {
+class ThesaurusManager(thesaurusURL: URL, alternativePredicates: Option[String], distanceCalculator: DistanceOrScoreCalculator) {
 
   private def chargeThesaurusAsModel(): Model = {
     RDFDataMgr.loadModel(thesaurusURL.toString)
@@ -21,7 +21,7 @@ class ThesaurusManager(thesaurusURL: URL, alternativePredicates: Option[String],
     content
   }
 
-  def lookForLabel(label: String, maxThreshold: Int): List[ThesaurusLabelLookupResult] = {
+  def lookForLabel(label: String, maxThreshold: Double): List[ThesaurusLabelLookupResult] = {
     val model = chargeThesaurusAsModel()
     val sparqlResource = loadFromResources("getAllLabels.sparql")
     val sparql =

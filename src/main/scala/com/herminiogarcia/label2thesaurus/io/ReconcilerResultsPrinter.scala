@@ -1,6 +1,6 @@
 package com.herminiogarcia.label2thesaurus.io
 
-import com.herminiogarcia.label2thesaurus.ReconcilerResult
+import com.herminiogarcia.label2thesaurus.reconciliation.ReconcilerResult
 
 class ReconcilerResultsPrinter(reconcilerResults: List[ReconcilerResult]) {
 
