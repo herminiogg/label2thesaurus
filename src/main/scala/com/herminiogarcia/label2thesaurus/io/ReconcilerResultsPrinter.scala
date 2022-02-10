@@ -17,7 +17,7 @@ class ReconcilerResultsPrinter(reconcilerResults: List[ReconcilerResult]) {
   def toCSV(path: String): Unit = {
     val fileHandler = new FileHandler(path)
     val contents = reconcilerResults.map(r => r.label + ";" + r.termLabel + ";" + r.lang + ";" + r.term + ";" + r.confidence).mkString("\n")
-    val headers = "label:termLabel;language;term;confidence\n"
+    val headers = "label;termLabel;language;term;confidence\n"
     fileHandler.write(headers + contents)
   }
 
