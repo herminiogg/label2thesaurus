@@ -1,6 +1,7 @@
 package com.herminiogarcia.label2thesaurus
 
 import com.herminiogarcia.label2thesaurus.io.{FileHandler, ReconcilerResultsPrinter}
+import com.herminiogarcia.label2thesaurus.reconciliation.Reconciler
 import picocli.CommandLine
 import picocli.CommandLine.{Command, Option}
 
@@ -25,8 +26,8 @@ class Main extends Callable[Int] {
   @Option(names = Array("-l", "--labels"), required = true, description = Array("Path to the file with the strings to be reconciled"))
   private var labelsPath: String = ""
 
-  @Option(names = Array("-th", "--threshold"), description = Array("Maximum threshold to use for the string distance"))
-  private var threshold: Int = 10
+  @Option(names = Array("-th", "--threshold"), description = Array("Maximum threshold to use for the string distance (e.g., 5) or min confidence for the score (e.g., 0.5)"))
+  private var threshold: Double = Double.NaN
 
   @Option(names = Array("-o", "--output"), description = Array("Path where to generate the output files"))
   private var outputPath: String = ""
@@ -41,13 +42,22 @@ class Main extends Callable[Int] {
   @Option(names = Array("-d", "--distance"), description = Array("Algorithm to use for the distance calculation. Available: Levenshtein, Damerau-Levenshtein, Hamming, LongestCommonSubsequence. Default: Levenshtein "))
   private var distanceCalculation: String = ""
 
+  @Option(names = Array("-s", "--score"), description = Array("Algorithm to use for the score calculation, if you use score calculation then the distance and threshold will not be used. Available: Cosine, Damerau-Levenshtein, Dice, Hamming, Jaro, Levenshtein, Metaphone and Soundex"))
+  private var scoreCalculation: String = ""
+
 
   override def call(): Int = {
     val thesauri = new FileHandler(thesauriPath).splitByLine().map(new URL(_))
     val labels = new FileHandler(labelsPath).splitByLine()
     val alternativePredicatesOption = if(alternativePredicates.isEmpty) None else scala.Option(alternativePredicates)
-    val distanceAlgorithm = if(distanceCalculation.isEmpty) None else scala.Option(distanceCalculation)
-    val results = new Reconciler(threshold, caseSensitive, distanceAlgorithm).reconcile(labels.toList, thesauri.toList, alternativePredicatesOption)
+    val distanceOrScoreAlgorithm = if(scoreCalculation.isEmpty) {
+      if(distanceCalculation.isEmpty) None else scala.Option(distanceCalculation)
+    } else scala.Option(scoreCalculation)
+    val isScore = scoreCalculation.nonEmpty
+    val finalThreshold = if(threshold == Double.NaN) {
+      if(isScore) 0.5 else 5
+    } else threshold
+    val results = new Reconciler(finalThreshold, caseSensitive, distanceOrScoreAlgorithm, isScore).reconcile(labels.toList, thesauri.toList, alternativePredicatesOption)
     val printer = new ReconcilerResultsPrinter(results)
     if(outputPath.isEmpty)
       printer.toSysOut()
