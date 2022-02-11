@@ -5,7 +5,7 @@ import org.scalatest.funsuite.AnyFunSuite
 
 import java.net.{URI, URL}
 
-class ConfidenceCalculationFromDistance extends AnyFunSuite {
+class ConfidenceCalculationFromDistance extends AnyFunSuite with ReconcilerCaller {
 
   //Levenshtein - case sensitive different thresholds
   test("fotografie: Case sensitive Levenshtein distance confidence calculation, threshold=4") {
@@ -118,7 +118,7 @@ class ConfidenceCalculationFromDistance extends AnyFunSuite {
       new URI("http://data.ehri-project.eu/vocabularies/ehri-terms/231"), "Remigratie","nl", 0.16666666666666666)))
   }
 
-  //LongestCommonSubsequence - no case sensitive different thresholds
+  //LongestCommonSubsequence - case sensitive different thresholds
   test("fotografie: Case sensitive LongestCommonSubsequence distance confidence calculation, threshold=4") {
     val results = callEHRITermsReconciler(4, true, "LongestCommonSubsequence")
     assert(results.contains(new ReconcilerResult("fotografie",
@@ -153,13 +153,6 @@ class ConfidenceCalculationFromDistance extends AnyFunSuite {
       new URI("http://data.ehri-project.eu/vocabularies/ehri-terms/797"), "Fotografi","it", 0.25)))
     assert(results.contains(new ReconcilerResult("fotografie",
       new URI("http://data.ehri-project.eu/vocabularies/ehri-terms/788"), "Storiografia","it", 0.14285714285714285)))
-  }
-
-
-  def callEHRITermsReconciler(threshold: Double, caseSensitive: Boolean, algorithm: String): List[ReconcilerResult] = {
-    val thesaurus = List(new URL("https://portal.ehri-project.eu/vocabularies/ehri_terms/export?format=RDF%2FXML"))
-    val labels = List("fotografie")
-    new Reconciler(threshold, caseSensitive, Option(algorithm), false).reconcile(labels, thesaurus, None)
   }
 
 }
