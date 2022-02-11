@@ -1,31 +1,106 @@
 label;termLabel;language;term;confidence
-fotografie;Fotografie;it;http://data.ehri-project.eu/vocabularies/ehri-terms/701;100.0
-fotografie;fotografie;cs;http://data.ehri-project.eu/vocabularies/ehri-terms/701;100.0
-fotografie;fotografie;pl;http://data.ehri-project.eu/vocabularies/ehri-terms/701;100.0
-fotografie;Fotografie;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/700;100.0
-fotografie;Fotografie;de;http://data.ehri-project.eu/vocabularies/ehri-terms/700;100.0
-deportees;Deportees;en;http://data.ehri-project.eu/vocabularies/ehri-terms/519;100.0
-fotografie;Fotografi;uk-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/797;75.0
-fotografie;Fotografi;it;http://data.ehri-project.eu/vocabularies/ehri-terms/797;75.0
-fotografie;fotografi;sh;http://data.ehri-project.eu/vocabularies/ehri-terms/797;75.0
-fotografie;Fotografin;de;http://data.ehri-project.eu/vocabularies/ehri-terms/797;75.0
-fotografie;fotografii;ru-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/701;75.0
-fotografie;Fotografia;it;http://data.ehri-project.eu/vocabularies/ehri-terms/700;75.0
-fotografie;fotografy;ru-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/797;50.0
-fotografie;fotografowie;pl;http://data.ehri-project.eu/vocabularies/ehri-terms/797;50.0
-fotografie;Fotografen;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/797;50.0
-fotografie;Fotograf;de;http://data.ehri-project.eu/vocabularies/ehri-terms/797;50.0
-fotografie;fotograf;sh;http://data.ehri-project.eu/vocabularies/ehri-terms/797;50.0
-fotografie;Fotografìï;uk-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/701;50.0
-fotografie;Fotografìâ;uk-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/700;50.0
-fotografie;fotografika;pl;http://data.ehri-project.eu/vocabularies/ehri-terms/700;50.0
-fotografie;fotografija;sh;http://data.ehri-project.eu/vocabularies/ehri-terms/700;50.0
-fotografie;fotografové;cs;http://data.ehri-project.eu/vocabularies/ehri-terms/797;25.0
-fotografie;demografie;cs;http://data.ehri-project.eu/vocabularies/ehri-terms/793;25.0
-fotografie;Demografie;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/793;25.0
-fotografie;Demografie;de;http://data.ehri-project.eu/vocabularies/ehri-terms/793;25.0
-deportees;deportace;cs;http://data.ehri-project.eu/vocabularies/ehri-terms/518;25.0
-deportees;Deportaties;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/518;25.0
-deportees;Deportati;it;http://data.ehri-project.eu/vocabularies/ehri-terms/519;25.0
-deportees;déportée;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/519;25.0
-Auschwitz;KZ Auschwitz;en;http://data.ehri-project.eu/vocabularies/ehri-camps/0;25.0
+fotografie;fotografie;cs;http://data.ehri-project.eu/vocabularies/ehri-terms/701;1.0
+fotografie;fotografie;pl;http://data.ehri-project.eu/vocabularies/ehri-terms/701;1.0
+fotografie;fotografi;sh;http://data.ehri-project.eu/vocabularies/ehri-terms/797;0.9411764705882353
+fotografie;fotografii;ru-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/701;0.8888888888888888
+fotografie;Fotografie;it;http://data.ehri-project.eu/vocabularies/ehri-terms/701;0.8888888888888888
+fotografie;Fotografie;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/700;0.8888888888888888
+fotografie;Fotografie;de;http://data.ehri-project.eu/vocabularies/ehri-terms/700;0.8888888888888888
+fotografie;fotograf;sh;http://data.ehri-project.eu/vocabularies/ehri-terms/797;0.875
+fotografie;fotografowie;pl;http://data.ehri-project.eu/vocabularies/ehri-terms/797;0.8421052631578947
+fotografie;fotografika;pl;http://data.ehri-project.eu/vocabularies/ehri-terms/700;0.8421052631578947
+fotografie;fotografija;sh;http://data.ehri-project.eu/vocabularies/ehri-terms/700;0.8421052631578947
+fotografie;Fotografi;uk-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/797;0.8235294117647058
+fotografie;Fotografi;it;http://data.ehri-project.eu/vocabularies/ehri-terms/797;0.8235294117647058
+fotografie;fotografy;ru-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/797;0.8235294117647058
+fotografie;fotografové;cs;http://data.ehri-project.eu/vocabularies/ehri-terms/797;0.7777777777777778
+fotografie;Fotografin;de;http://data.ehri-project.eu/vocabularies/ehri-terms/797;0.7777777777777778
+fotografie;Fotografia;it;http://data.ehri-project.eu/vocabularies/ehri-terms/700;0.7777777777777778
+fotografie;Fotograf;de;http://data.ehri-project.eu/vocabularies/ehri-terms/797;0.75
+fotografie;fotografování;cs;http://data.ehri-project.eu/vocabularies/ehri-terms/700;0.7
+fotografie;Fotografen;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/797;0.6666666666666666
+fotografie;fotografkinja;sh;http://data.ehri-project.eu/vocabularies/ehri-terms/797;0.6666666666666666
+fotografie;demografie;cs;http://data.ehri-project.eu/vocabularies/ehri-terms/793;0.6666666666666666
+fotografie;Demografie;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/793;0.6666666666666666
+fotografie;Demografie;de;http://data.ehri-project.eu/vocabularies/ehri-terms/793;0.6666666666666666
+fotografie;Fotografìï;uk-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/701;0.6666666666666666
+fotografie;Fotografìâ;uk-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/700;0.6666666666666666
+fotografie;Fotograf / Fotografin;de;http://data.ehri-project.eu/vocabularies/ehri-terms/797;0.6363636363636364
+fotografie;Historiografie;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/788;0.6363636363636364
+fotografie;historiografie;cs;http://data.ehri-project.eu/vocabularies/ehri-terms/788;0.6363636363636364
+fotografie;photographie;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/700;0.631578947368421
+fotografie;Storiografia;it;http://data.ehri-project.eu/vocabularies/ehri-terms/788;0.6
+fotografie;Photographie;de;http://data.ehri-project.eu/vocabularies/ehri-terms/700;0.6
+fotografie;fotografske slike;sh;http://data.ehri-project.eu/vocabularies/ehri-terms/701;0.5833333333333334
+fotografie;istoriografiâ;ru-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/788;0.5714285714285714
+fotografie;photographe;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/797;0.5555555555555556
+fotografie;demografia;pl;http://data.ehri-project.eu/vocabularies/ehri-terms/793;0.5555555555555556
+fotografie;demografiâ;ru-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/793;0.5555555555555556
+fotografie;Demografia;it;http://data.ehri-project.eu/vocabularies/ehri-terms/793;0.5555555555555556
+fotografie;arte della fotografia;it;http://data.ehri-project.eu/vocabularies/ehri-terms/700;0.5517241379310345
+fotografie;historiografia;pl;http://data.ehri-project.eu/vocabularies/ehri-terms/788;0.5454545454545454
+fotografie;fotograf  / fotografkinja;sh;http://data.ehri-project.eu/vocabularies/ehri-terms/797;0.5384615384615384
+fotografie;demografija;sh;http://data.ehri-project.eu/vocabularies/ehri-terms/793;0.5263157894736842
+fotografie;Photographs;en;http://data.ehri-project.eu/vocabularies/ehri-terms/701;0.5263157894736842
+fotografie;Photography;en;http://data.ehri-project.eu/vocabularies/ehri-terms/700;0.5263157894736842
+fotografie;historiografija;sh;http://data.ehri-project.eu/vocabularies/ehri-terms/788;0.5217391304347826
+fotografie;Nazi-historiografie;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/362;0.5185185185185185
+fotografie;Photographers;en;http://data.ehri-project.eu/vocabularies/ehri-terms/797;0.47619047619047616
+fotografie;Ìstorìografìâ;uk-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/788;0.47619047619047616
+fotografie;relacje, biografie;pl;http://data.ehri-project.eu/vocabularies/ehri-terms/687;0.46153846153846156
+fotografie;historiographie;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/788;0.45454545454545453
+fotografie;nacistická historiografie;cs;http://data.ehri-project.eu/vocabularies/ehri-terms/362;0.45161290322580644
+fotografie;Demografìâ;uk-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/793;0.4444444444444444
+fotografie;historiografie holocaustu;cs;http://data.ehri-project.eu/vocabularies/ehri-terms/789;0.4375
+fotografie;Historiographie;de;http://data.ehri-project.eu/vocabularies/ehri-terms/788;0.43478260869565216
+fotografie;Storiografia nazista;it;http://data.ehri-project.eu/vocabularies/ehri-terms/362;0.42857142857142855
+fotografie;svědectví, biografie;cs;http://data.ehri-project.eu/vocabularies/ehri-terms/687;0.42857142857142855
+fotografie;trafic;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/266;0.42857142857142855
+fotografie;démographie;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/793;0.42105263157894735
+fotografie;kartografičeskie materialy;ru-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/1440;0.4117647058823529
+fotografie;historiografia Zagłady;pl;http://data.ehri-project.eu/vocabularies/ehri-terms/789;0.4
+fotografie;istoriografiâ Holokosta;ru-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/789;0.4
+fotografie;nacistskaâ istoriografiâ;ru-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/362;0.4
+fotografie;Materiale cartografico;it;http://data.ehri-project.eu/vocabularies/ehri-terms/1440;0.4
+fotografie;Historiografie des Holocausts;de;http://data.ehri-project.eu/vocabularies/ehri-terms/789;0.3888888888888889
+fotografie;historiografia nazistowska;pl;http://data.ehri-project.eu/vocabularies/ehri-terms/362;0.3870967741935484
+fotografie;kartografické materiály;cs;http://data.ehri-project.eu/vocabularies/ehri-terms/1440;0.3870967741935484
+fotografie;Historiografie van de Holocaust;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/789;0.3783783783783784
+fotografie;nacistička historiografija;sh;http://data.ehri-project.eu/vocabularies/ehri-terms/362;0.375
+fotografie;materiały kartograficzne;pl;http://data.ehri-project.eu/vocabularies/ehri-terms/1440;0.375
+fotografie;Kartografisches Material;de;http://data.ehri-project.eu/vocabularies/ehri-terms/1440;0.375
+fotografie;Getuigenissen, biografieen;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/687;0.375
+fotografie;historiografija Holokausta;sh;http://data.ehri-project.eu/vocabularies/ehri-terms/789;0.36363636363636365
+fotografie;Historiográfia;hu;http://data.ehri-project.eu/vocabularies/ehri-terms/788;0.36363636363636365
+fotografie;Historiography;en;http://data.ehri-project.eu/vocabularies/ehri-terms/788;0.36363636363636365
+fotografie;Testimonianze, biografie ;it;http://data.ehri-project.eu/vocabularies/ehri-terms/687;0.36363636363636365
+fotografie;Storiografia dell'Olocausto;it;http://data.ehri-project.eu/vocabularies/ehri-terms/789;0.35294117647058826
+fotografie;Emigratie;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/203;0.35294117647058826
+fotografie;Autobiografische Erzählung;de;http://data.ehri-project.eu/vocabularies/ehri-terms/686;0.35294117647058826
+fotografie;Demography;en;http://data.ehri-project.eu/vocabularies/ehri-terms/793;0.3333333333333333
+fotografie;Demográfia;hu;http://data.ehri-project.eu/vocabularies/ehri-terms/793;0.3333333333333333
+fotografie;Ìstorìografìâ Golokostu;uk-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/789;0.3333333333333333
+fotografie;ograničeniâ;ru-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/658;0.3333333333333333
+fotografie;Remigratie;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/231;0.3333333333333333
+fotografie;kartografski materijal;sh;http://data.ehri-project.eu/vocabularies/ehri-terms/1440;0.3333333333333333
+fotografie;trafiquant;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/267;0.3333333333333333
+fotografie;Foto;de;http://data.ehri-project.eu/vocabularies/ehri-terms/701;0.3333333333333333
+fotografie;fotosʺëmka;ru-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/700;0.3333333333333333
+fotografie;Nacists'ka ìstorìografìâ;uk-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/362;0.3225806451612903
+fotografie;Kartografìčnì materìali;uk-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/1440;0.3225806451612903
+fotografie;matériel cartographique;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/1440;0.3225806451612903
+fotografie;Emigratiepogingen;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/229;0.32
+fotografie;ograničenje;sh;http://data.ehri-project.eu/vocabularies/ehri-terms/658;0.3157894736842105
+fotografie;Augenzeugenberichte und Biografien;de;http://data.ehri-project.eu/vocabularies/ehri-terms/687;0.3157894736842105
+fotografie;trafiquante;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/267;0.3157894736842105
+fotografie;igrani film;sh;http://data.ehri-project.eu/vocabularies/ehri-terms/702;0.3157894736842105
+fotografie;historiographie du nazisme;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/362;0.3125
+fotografie;svidetel'stva, biografii;ru-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/687;0.3125
+fotografie;Iratok lefoglalása;hu;http://data.ehri-project.eu/vocabularies/ehri-terms/587;0.3076923076923077
+fotografie;rafle;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/550;0.3076923076923077
+fotografie;razie;cs;http://data.ehri-project.eu/vocabularies/ehri-terms/550;0.3076923076923077
+fotografie;afiši;ru-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/845;0.3076923076923077
+fotografie;photo;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/701;0.3076923076923077
+fotografie;Photo;de;http://data.ehri-project.eu/vocabularies/ehri-terms/701;0.3076923076923077
+fotografie;historiographie de la Shoah;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/789;0.30303030303030304
+fotografie;svjedočanstvo, biografija;sh;http://data.ehri-project.eu/vocabularies/ehri-terms/687;0.30303030303030304
