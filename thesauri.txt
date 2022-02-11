@@ -1,2 +1,1 @@
 https://portal.ehri-project.eu/vocabularies/ehri_terms/export?format=RDF%2FXML
-https://portal.ehri-project.eu/vocabularies/ehri_camps/export?format=TTL

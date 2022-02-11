@@ -1,31 +1,257 @@
 label;termLabel;language;term;confidence
-fotografie;Fotografie;it;http://data.ehri-project.eu/vocabularies/ehri-terms/701;100.0
-fotografie;fotografie;cs;http://data.ehri-project.eu/vocabularies/ehri-terms/701;100.0
-fotografie;fotografie;pl;http://data.ehri-project.eu/vocabularies/ehri-terms/701;100.0
-fotografie;Fotografie;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/700;100.0
-fotografie;Fotografie;de;http://data.ehri-project.eu/vocabularies/ehri-terms/700;100.0
-deportees;Deportees;en;http://data.ehri-project.eu/vocabularies/ehri-terms/519;100.0
-fotografie;Fotografi;uk-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/797;75.0
-fotografie;Fotografi;it;http://data.ehri-project.eu/vocabularies/ehri-terms/797;75.0
-fotografie;fotografi;sh;http://data.ehri-project.eu/vocabularies/ehri-terms/797;75.0
-fotografie;Fotografin;de;http://data.ehri-project.eu/vocabularies/ehri-terms/797;75.0
-fotografie;fotografii;ru-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/701;75.0
-fotografie;Fotografia;it;http://data.ehri-project.eu/vocabularies/ehri-terms/700;75.0
-fotografie;fotografy;ru-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/797;50.0
-fotografie;fotografowie;pl;http://data.ehri-project.eu/vocabularies/ehri-terms/797;50.0
-fotografie;Fotografen;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/797;50.0
-fotografie;Fotograf;de;http://data.ehri-project.eu/vocabularies/ehri-terms/797;50.0
-fotografie;fotograf;sh;http://data.ehri-project.eu/vocabularies/ehri-terms/797;50.0
-fotografie;Fotografìï;uk-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/701;50.0
-fotografie;Fotografìâ;uk-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/700;50.0
-fotografie;fotografika;pl;http://data.ehri-project.eu/vocabularies/ehri-terms/700;50.0
-fotografie;fotografija;sh;http://data.ehri-project.eu/vocabularies/ehri-terms/700;50.0
-fotografie;fotografové;cs;http://data.ehri-project.eu/vocabularies/ehri-terms/797;25.0
-fotografie;demografie;cs;http://data.ehri-project.eu/vocabularies/ehri-terms/793;25.0
-fotografie;Demografie;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/793;25.0
-fotografie;Demografie;de;http://data.ehri-project.eu/vocabularies/ehri-terms/793;25.0
-deportees;deportace;cs;http://data.ehri-project.eu/vocabularies/ehri-terms/518;25.0
-deportees;Deportaties;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/518;25.0
-deportees;Deportati;it;http://data.ehri-project.eu/vocabularies/ehri-terms/519;25.0
-deportees;déportée;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/519;25.0
-Auschwitz;KZ Auschwitz;en;http://data.ehri-project.eu/vocabularies/ehri-camps/0;25.0
+fotografie;fotografowie;pl;http://data.ehri-project.eu/vocabularies/ehri-terms/797;0.4
+fotografie;Lavoro forzato, Deportazione, Ghetti, Lager e Campi per la Soluzione finale;it;http://data.ehri-project.eu/vocabularies/ehri-terms/476;0.4
+fotografie;fotografske slike;sh;http://data.ehri-project.eu/vocabularies/ehri-terms/701;0.4
+fotografie;fotografie;cs;http://data.ehri-project.eu/vocabularies/ehri-terms/701;0.4
+fotografie;fotografie;pl;http://data.ehri-project.eu/vocabularies/ehri-terms/701;0.4
+fotografie;fotograf  / fotografkinja;sh;http://data.ehri-project.eu/vocabularies/ehri-terms/797;0.3333333333333333
+fotografie;Fotograf / Fotografin;de;http://data.ehri-project.eu/vocabularies/ehri-terms/797;0.3333333333333333
+fotografie;fotografi;sh;http://data.ehri-project.eu/vocabularies/ehri-terms/797;0.3333333333333333
+fotografie;fotografkinja;sh;http://data.ehri-project.eu/vocabularies/ehri-terms/797;0.3333333333333333
+fotografie;travail forcé, déportation , ghetto , camp et camp de la solution finale;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/476;0.3333333333333333
+fotografie;fotografii;ru-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/701;0.3333333333333333
+fotografie;Fotografie;it;http://data.ehri-project.eu/vocabularies/ehri-terms/701;0.3333333333333333
+fotografie;Fotografie;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/700;0.3333333333333333
+fotografie;Fotografie;de;http://data.ehri-project.eu/vocabularies/ehri-terms/700;0.3333333333333333
+fotografie;fotografika;pl;http://data.ehri-project.eu/vocabularies/ehri-terms/700;0.3333333333333333
+fotografie;fotografija;sh;http://data.ehri-project.eu/vocabularies/ehri-terms/700;0.3333333333333333
+fotografie;arte della fotografia;it;http://data.ehri-project.eu/vocabularies/ehri-terms/700;0.3333333333333333
+fotografie;fotografové;cs;http://data.ehri-project.eu/vocabularies/ehri-terms/797;0.25
+fotografie;Fotografi;uk-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/797;0.25
+fotografie;Fotografi;it;http://data.ehri-project.eu/vocabularies/ehri-terms/797;0.25
+fotografie;fotografy;ru-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/797;0.25
+fotografie;Fotografen;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/797;0.25
+fotografie;Fotografin;de;http://data.ehri-project.eu/vocabularies/ehri-terms/797;0.25
+fotografie;fotograf;sh;http://data.ehri-project.eu/vocabularies/ehri-terms/797;0.25
+fotografie;historiografie holocaustu;cs;http://data.ehri-project.eu/vocabularies/ehri-terms/789;0.25
+fotografie;Historiografie van de Holocaust;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/789;0.25
+fotografie;Storiografia dell'Olocausto;it;http://data.ehri-project.eu/vocabularies/ehri-terms/789;0.25
+fotografie;Historiografie des Holocausts;de;http://data.ehri-project.eu/vocabularies/ehri-terms/789;0.25
+fotografie;Historiografie;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/788;0.25
+fotografie;historiografie;cs;http://data.ehri-project.eu/vocabularies/ehri-terms/788;0.25
+fotografie;chef religieux juif et fonctionnaire communautaire juif;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/895;0.25
+fotografie;Joodse begrafenissen;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/751;0.25
+fotografie;Jüdische Hilfsorganisation, Gesundheitsorganisation, Rettungsorganisation;de;http://data.ehri-project.eu/vocabularies/ehri-terms/875;0.25
+fotografie;Religionsführer und religiöser Funktionsträger / Religionsführerin und religiöse Funktionsträgerin;de;http://data.ehri-project.eu/vocabularies/ehri-terms/730;0.25
+fotografie;fonctionnaires religieux, chefs religieux;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/730;0.25
+fotografie;Nazi-historiografie;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/362;0.25
+fotografie;nacistická historiografie;cs;http://data.ehri-project.eu/vocabularies/ehri-terms/362;0.25
+fotografie;informateur / informatrice;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/224;0.25
+fotografie;Profanazione di testi religiosi e oggetti di culto ebraici;it;http://data.ehri-project.eu/vocabularies/ehri-terms/350;0.25
+fotografie;prisonnier utilisé pour certaines fonctions (dans les camps);fr;http://data.ehri-project.eu/vocabularies/ehri-terms/484;0.25
+fotografie;kartografski materijal;sh;http://data.ehri-project.eu/vocabularies/ehri-terms/1440;0.25
+fotografie;kartografičeskie materialy;ru-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/1440;0.25
+fotografie;materiały kartograficzne;pl;http://data.ehri-project.eu/vocabularies/ehri-terms/1440;0.25
+fotografie;Kartografisches Material;de;http://data.ehri-project.eu/vocabularies/ehri-terms/1440;0.25
+fotografie;kartografické materiály;cs;http://data.ehri-project.eu/vocabularies/ehri-terms/1440;0.25
+fotografie;Hilfs- und Wohlfahrtsorganisationen;de;http://data.ehri-project.eu/vocabularies/ehri-terms/317;0.25
+fotografie;formation professionnelle;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/310;0.25
+fotografie;établissement de formation professionnelle;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/311;0.25
+fotografie;Hilfsorganisation, Gesundheitsorganisation, Rettungsorganisation;de;http://data.ehri-project.eu/vocabularies/ehri-terms/303;0.25
+fotografie;travailleur forcé juif / travailleuse forcée juive;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/558;0.25
+fotografie;Autobiografische Erzählung;de;http://data.ehri-project.eu/vocabularies/ehri-terms/686;0.25
+fotografie;Getuigenissen, biografieen;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/687;0.25
+fotografie;Augenzeugenberichte und Biografien;de;http://data.ehri-project.eu/vocabularies/ehri-terms/687;0.25
+fotografie;Testimonianze, biografie ;it;http://data.ehri-project.eu/vocabularies/ehri-terms/687;0.25
+fotografie;svjedočanstvo, biografija;sh;http://data.ehri-project.eu/vocabularies/ehri-terms/687;0.25
+fotografie;svědectví, biografie;cs;http://data.ehri-project.eu/vocabularies/ehri-terms/687;0.25
+fotografie;Information concerning extermination;en;http://data.ehri-project.eu/vocabularies/ehri-terms/268;0.25
+fotografie;A deportálások megakadályozására irányuló tevékenységek;hu;http://data.ehri-project.eu/vocabularies/ehri-terms/257;0.25
+fotografie;mouvement conservateur et organisation conservatrice;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/973;0.25
+fotografie;Razionamento dei generi alimentari;it;http://data.ehri-project.eu/vocabularies/ehri-terms/834;0.25
+fotografie;Movimenti e organizzazioni fasciste;it;http://data.ehri-project.eu/vocabularies/ehri-terms/964;0.25
+fotografie;mouvement fasciste et organisation fasciste;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/964;0.25
+fotografie;Fotografia;it;http://data.ehri-project.eu/vocabularies/ehri-terms/700;0.25
+fotografie;photographie;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/700;0.25
+fotografie;fotografování;cs;http://data.ehri-project.eu/vocabularies/ehri-terms/700;0.25
+fotografie;Photographie;de;http://data.ehri-project.eu/vocabularies/ehri-terms/700;0.25
+fotografie;protection figurative;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/941;0.25
+fotografie;chef d'une circonscription administrative;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/1158;0.25
+fotografie;formation agriculturelle;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/913;0.25
+fotografie;Contrabbando transfrontaliero;it;http://data.ehri-project.eu/vocabularies/ehri-terms/192;0.25
+fotografie;photographe;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/797;0.14285714285714285
+fotografie;Photographers;en;http://data.ehri-project.eu/vocabularies/ehri-terms/797;0.14285714285714285
+fotografie;Fotograf;de;http://data.ehri-project.eu/vocabularies/ehri-terms/797;0.14285714285714285
+fotografie;Isolamento e separazione sociale;it;http://data.ehri-project.eu/vocabularies/ehri-terms/667;0.14285714285714285
+fotografie;demografie;cs;http://data.ehri-project.eu/vocabularies/ehri-terms/793;0.14285714285714285
+fotografie;Demografie;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/793;0.14285714285714285
+fotografie;Demografie;de;http://data.ehri-project.eu/vocabularies/ehri-terms/793;0.14285714285714285
+fotografie;Historiographie des Holocaust;de;http://data.ehri-project.eu/vocabularies/ehri-terms/789;0.14285714285714285
+fotografie;historiografija Holokausta;sh;http://data.ehri-project.eu/vocabularies/ehri-terms/789;0.14285714285714285
+fotografie;historiografia Zagłady;pl;http://data.ehri-project.eu/vocabularies/ehri-terms/789;0.14285714285714285
+fotografie;historiographie de la Shoah;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/789;0.14285714285714285
+fotografie;istoriografiâ Holokosta;ru-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/789;0.14285714285714285
+fotografie;Historiography of the Holocaust;en;http://data.ehri-project.eu/vocabularies/ehri-terms/789;0.14285714285714285
+fotografie;Holokauszt historiográfia;hu;http://data.ehri-project.eu/vocabularies/ehri-terms/789;0.14285714285714285
+fotografie;istoriografiâ;ru-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/788;0.14285714285714285
+fotografie;historiographie;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/788;0.14285714285714285
+fotografie;historiografija;sh;http://data.ehri-project.eu/vocabularies/ehri-terms/788;0.14285714285714285
+fotografie;Storiografia;it;http://data.ehri-project.eu/vocabularies/ehri-terms/788;0.14285714285714285
+fotografie;Historiographie;de;http://data.ehri-project.eu/vocabularies/ehri-terms/788;0.14285714285714285
+fotografie;historiografia;pl;http://data.ehri-project.eu/vocabularies/ehri-terms/788;0.14285714285714285
+fotografie;combustion de cadavre / crémation de cadavre;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/516;0.14285714285714285
+fotografie;Persecuzione di cristiani di origine ebraica;it;http://data.ehri-project.eu/vocabularies/ehri-terms/648;0.14285714285714285
+fotografie;presledovaniâ hristian evrejskogo proishoždeniâ;ru-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/648;0.14285714285714285
+fotografie;Joodse religieuze leiders en functionarissen;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/895;0.14285714285714285
+fotografie;Spìvrobìtniki êvrejs'koï gromads'koï merežì;uk-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/897;0.14285714285714285
+fotografie;fonctionnaire juif;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/897;0.14285714285714285
+fotografie;torgovye predpriâtiâ, prinadležaŝie evreâm;ru-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/889;0.14285714285714285
+fotografie;Joodse begraafplaatsen;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/750;0.14285714285714285
+fotografie;Joodse emigratie;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/880;0.14285714285714285
+fotografie;Inhaftierter/Inhaftierte;de;http://data.ehri-project.eu/vocabularies/ehri-terms/618;0.14285714285714285
+fotografie;Movement restrictions against Jews;en;http://data.ehri-project.eu/vocabularies/ehri-terms/615;0.14285714285714285
+fotografie;Joodse hulp-, gezondheids- en reddingsorganisaties;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/875;0.14285714285714285
+fotografie;židovská pomocné, zdravotní a záchranné organizace;cs;http://data.ehri-project.eu/vocabularies/ehri-terms/875;0.14285714285714285
+fotografie;organisation éducative et cadre éducatif juifs;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/876;0.14285714285714285
+fotografie;Zionistische organisaties;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/871;0.14285714285714285
+fotografie;sionistické organizace;cs;http://data.ehri-project.eu/vocabularies/ehri-terms/871;0.14285714285714285
+fotografie;Nationalisatie (onder staatseigendom plaatsen);nl;http://data.ehri-project.eu/vocabularies/ehri-terms/600;0.14285714285714285
+fotografie;Nationalisation (bringing under state ownership);en;http://data.ehri-project.eu/vocabularies/ehri-terms/600;0.14285714285714285
+fotografie;Bezetting, onderdrukking, discriminatie en vervolging;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/601;0.14285714285714285
+fotografie;occupation , oppression , discrimination et persécution;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/601;0.14285714285714285
+fotografie;sertifikaty dlâ immigracii v podmandatnuû Palestinu;ru-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/867;0.14285714285714285
+fotografie;chef religieux et fonctionnaire;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/730;0.14285714285714285
+fotografie;chefs religieux. Fonctionnaires religieux;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/730;0.14285714285714285
+fotografie;dirigeant religieux et fonctionnaire religieux;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/730;0.14285714285714285
+fotografie;Rozprzestrzenianie informacji dotyczacej Zagłady;pl;http://data.ehri-project.eu/vocabularies/ehri-terms/860;0.14285714285714285
+fotografie;diffusion d'information à propos (au sujet) de la Shoah;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/860;0.14285714285714285
+fotografie;rasprostranenie informacii o Holokoste;ru-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/860;0.14285714285714285
+fotografie;nezakoniti prelazak granice;sh;http://data.ehri-project.eu/vocabularies/ehri-terms/234;0.14285714285714285
+fotografie;nacistička historiografija;sh;http://data.ehri-project.eu/vocabularies/ehri-terms/362;0.14285714285714285
+fotografie;historiografia nazistowska;pl;http://data.ehri-project.eu/vocabularies/ehri-terms/362;0.14285714285714285
+fotografie;nacistskaâ istoriografiâ;ru-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/362;0.14285714285714285
+fotografie;historiographie du nazisme;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/362;0.14285714285714285
+fotografie;Storiografia nazista;it;http://data.ehri-project.eu/vocabularies/ehri-terms/362;0.14285714285714285
+fotografie;mouvement national-socialiste et organisation national-socialiste;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/358;0.14285714285714285
+fotografie;Nacionálně-socialistická hnutí a organizace;cs;http://data.ehri-project.eu/vocabularies/ehri-terms/358;0.14285714285714285
+fotografie;Nationalsozialistische Bewegungen und Organisationen;de;http://data.ehri-project.eu/vocabularies/ehri-terms/358;0.14285714285714285
+fotografie;Movimenti e organizzazioni nazionalsocialiste;it;http://data.ehri-project.eu/vocabularies/ehri-terms/358;0.14285714285714285
+fotografie;Nationaalsocialistische bewegingen en organisaties;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/358;0.14285714285714285
+fotografie;Informationsweitergabe;de;http://data.ehri-project.eu/vocabularies/ehri-terms/220;0.14285714285714285
+fotografie;Occultamento delle origini ebraiche;it;http://data.ehri-project.eu/vocabularies/ehri-terms/221;0.14285714285714285
+fotografie;Politieke collaboratie;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/222;0.14285714285714285
+fotografie;arbajtskomanda, brigada rabočih, zanâtyh na prinuditel'nyh rabotah;ru-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/489;0.14285714285714285
+fotografie;collaborateur / collaboratrice;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/223;0.14285714285714285
+fotografie;profanation de textes et d'objets religieux juifs;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/350;0.14285714285714285
+fotografie;prisonnier auxiliaire pour certaines fonctions (dans les camps);fr;http://data.ehri-project.eu/vocabularies/ehri-terms/484;0.14285714285714285
+fotografie;A Biztonsági Rendőrség és az SD tisztje;hu;http://data.ehri-project.eu/vocabularies/ehri-terms/1308;0.14285714285714285
+fotografie;prinuditel'nyj trud, deportacii, getto, lagerâ i lagerâ okončatel'nogo rešeniâ;ru-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/476;0.14285714285714285
+fotografie;Zwangsarbeit, Deportation, Gettos, Konzentrationslager und Vernichtungslager;de;http://data.ehri-project.eu/vocabularies/ehri-terms/476;0.14285714285714285
+fotografie;Antisemitische toespraken, dreigementen en proclamaties;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/343;0.14285714285714285
+fotografie;osoblje logora i geta;sh;http://data.ehri-project.eu/vocabularies/ehri-terms/477;0.14285714285714285
+fotografie;protužidovska naredba i dekret;sh;http://data.ehri-project.eu/vocabularies/ehri-terms/339;0.14285714285714285
+fotografie;Diffusione di notizie riguardanti la Shoah;it;http://data.ehri-project.eu/vocabularies/ehri-terms/202;0.14285714285714285
+fotografie;Dispersersal of knowledge regarding the Holocaust;en;http://data.ehri-project.eu/vocabularies/ehri-terms/202;0.14285714285714285
+fotografie;bureau de la Gestapo pour les affaires juives;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/595;0.14285714285714285
+fotografie;Marìonetkovì pravitelì;uk-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/597;0.14285714285714285
+fotografie;Marìonetkovij pravitel' ta zradnik svogo narodu (Kvìslìng);uk-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/597;0.14285714285714285
+fotografie;chef d'Etat fantoche et traitre à son peuple;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/597;0.14285714285714285
+fotografie;marioneta i izdajica svog naroda (kvisling);sh;http://data.ehri-project.eu/vocabularies/ehri-terms/597;0.14285714285714285
+fotografie;Lavoratori stranieri;it;http://data.ehri-project.eu/vocabularies/ehri-terms/591;0.14285714285714285
+fotografie;Kartografìčnì materìali;uk-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/1440;0.14285714285714285
+fotografie;Materiale cartografico;it;http://data.ehri-project.eu/vocabularies/ehri-terms/1440;0.14285714285714285
+fotografie;matériel cartographique;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/1440;0.14285714285714285
+fotografie;Cartographic materials;en;http://data.ehri-project.eu/vocabularies/ehri-terms/1440;0.14285714285714285
+fotografie;bûro i obŝestva po opeke nad ariizirovannymi predpriâtiâmi;ru-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/589;0.14285714285714285
+fotografie;organisation de secours et d'assistance (sociale);fr;http://data.ehri-project.eu/vocabularies/ehri-terms/317;0.14285714285714285
+fotografie;dobrotvorna fondacija;sh;http://data.ehri-project.eu/vocabularies/ehri-terms/313;0.14285714285714285
+fotografie;organisation internationale;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/309;0.14285714285714285
+fotografie;pomocné, zdravotnické a záchranné organizace;cs;http://data.ehri-project.eu/vocabularies/ehri-terms/303;0.14285714285714285
+fotografie;travailleur forcé / travailleuse forcée;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/557;0.14285714285714285
+fotografie;Lavoratori forzati ebrei;it;http://data.ehri-project.eu/vocabularies/ehri-terms/558;0.14285714285714285
+fotografie;témoignage , biographie;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/687;0.14285714285714285
+fotografie;relacje, biografie;pl;http://data.ehri-project.eu/vocabularies/ehri-terms/687;0.14285714285714285
+fotografie;svidetel'stva, biografii;ru-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/687;0.14285714285714285
+fotografie;Testimonies, Biographies;en;http://data.ehri-project.eu/vocabularies/ehri-terms/687;0.14285714285714285
+fotografie;écrivain juif et poète juif / écrivaine juive et poétesse juive;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/682;0.14285714285714285
+fotografie;dokument koji potvrđuje arijevsko podrijetlo (dobivanje);sh;http://data.ehri-project.eu/vocabularies/ehri-terms/183;0.14285714285714285
+fotografie;Lavoro forzato in campi d'aviazione;it;http://data.ehri-project.eu/vocabularies/ehri-terms/1106;0.14285714285714285
+fotografie;Forced labour in airfields;en;http://data.ehri-project.eu/vocabularies/ehri-terms/1106;0.14285714285714285
+fotografie;Önkormányzatok és helyi közigazgatási egységek;hu;http://data.ehri-project.eu/vocabularies/ehri-terms/1115;0.14285714285714285
+fotografie;organisation gouvernementale;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/1113;0.14285714285714285
+fotografie;fonctionnaire;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/1111;0.14285714285714285
+fotografie;Government ministries and offices;en;http://data.ehri-project.eu/vocabularies/ehri-terms/1110;0.14285714285714285
+fotografie;Reacties op bezetting en discriminatie;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/173;0.14285714285714285
+fotografie;Gericht für Straf- und Zivilprozesse;de;http://data.ehri-project.eu/vocabularies/ehri-terms/1127;0.14285714285714285
+fotografie;potvrda o emigraciji;sh;http://data.ehri-project.eu/vocabularies/ehri-terms/1142;0.14285714285714285
+fotografie;Certificati per l'emigrazione;it;http://data.ehri-project.eu/vocabularies/ehri-terms/1142;0.14285714285714285
+fotografie;zdravotnické organizace;cs;http://data.ehri-project.eu/vocabularies/ehri-terms/284;0.14285714285714285
+fotografie;pomoŝ', blagotvoritelnost', spasenie;ru-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/276;0.14285714285714285
+fotografie;Informatie over vernietiging;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/268;0.14285714285714285
+fotografie;information sur l'extermination;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/268;0.14285714285714285
+fotografie;Informationen über die Vernichtung von Juden;de;http://data.ehri-project.eu/vocabularies/ehri-terms/268;0.14285714285714285
+fotografie;Informatie over uitroeiing;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/268;0.14285714285714285
+fotografie;Informationen über die Judenvernichtung;de;http://data.ehri-project.eu/vocabularies/ehri-terms/268;0.14285714285714285
+fotografie;trafiquant / trafiquante;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/267;0.14285714285714285
+fotografie;Voorstanders van de berechting van oorlogsmisdadigers;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/1209;0.14285714285714285
+fotografie;Mitarbeiter bei der juristischen Verfolgung von NS-Verbrechern / Mitarbeiterin bei der juristischen Verfolgung von NS-Verbrechen;de;http://data.ehri-project.eu/vocabularies/ehri-terms/1209;0.14285714285714285
+fotografie;aktivisty sudebnogo presledovanija prestupnikov;ru-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/1209;0.14285714285714285
+fotografie;militant pour la traduction en justice des criminels / militante pour la traduction en justice des criminels;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/1209;0.14285714285714285
+fotografie;Activists in Holocaust memorial archives;en;http://data.ehri-project.eu/vocabularies/ehri-terms/1208;0.14285714285714285
+fotografie;militant pour la constitution d'archives sur la mémoire de la Shoah / militante pour la constitution d'archives sur la mémoire de la Shoah;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/1208;0.14285714285714285
+fotografie;militant pour la constitution d'archives sur la mémoire de la Shoah;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/1208;0.14285714285714285
+fotografie;militante pour la constitution d'archives sur la mémoire de la Shoah;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/1208;0.14285714285714285
+fotografie;mouvement de jeunesse et organisation de jeunesse;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/1203;0.14285714285714285
+fotografie;omladinski pokreti i organizacije;sh;http://data.ehri-project.eu/vocabularies/ehri-terms/1203;0.14285714285714285
+fotografie;Joods-Christelijke organisaties;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/1202;0.14285714285714285
+fotografie;dokazatel'stvo arijskogo proishoždeniâ;ru-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/382;0.14285714285714285
+fotografie;opór przeciwko władzy nazistowskiej - chrześcijanie;pl;http://data.ehri-project.eu/vocabularies/ehri-terms/251;0.14285714285714285
+fotografie;zbirka dokumentacije od strane Židova za vrijeme Holokausta;sh;http://data.ehri-project.eu/vocabularies/ehri-terms/244;0.14285714285714285
+fotografie;Collection of documentation by Jews during the Holocaust;en;http://data.ehri-project.eu/vocabularies/ehri-terms/244;0.14285714285714285
+fotografie;Contaminazione razziale;it;http://data.ehri-project.eu/vocabularies/ehri-terms/378;0.14285714285714285
+fotografie;Židov aktivan u pokretu otpora / Židovka aktivna u pokretu otpora;sh;http://data.ehri-project.eu/vocabularies/ehri-terms/247;0.14285714285714285
+fotografie;commandant de la police de sûreté et du service de sécurité (dans un territoire sous occupation nazie);fr;http://data.ehri-project.eu/vocabularies/ehri-terms/1190;0.14285714285714285
+fotografie;mouvement nationaliste et organisation nationaliste;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/1066;0.14285714285714285
+fotografie;nacionalistická hnutí a organizace;cs;http://data.ehri-project.eu/vocabularies/ehri-terms/1066;0.14285714285714285
+fotografie;Movimenti e organizzazioni nazionaliste;it;http://data.ehri-project.eu/vocabularies/ehri-terms/1066;0.14285714285714285
+fotografie;Nationalistische bewegingen en organisaties;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/1066;0.14285714285714285
+fotografie;organisation paramilitaire;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/1197;0.14285714285714285
+fotografie;organisation chargée de la commémoration;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/714;0.14285714285714285
+fotografie;sportovní organizace;cs;http://data.ehri-project.eu/vocabularies/ehri-terms/710;0.14285714285714285
+fotografie;Sportorganisaties;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/710;0.14285714285714285
+fotografie;journaliste juif / journaliste juive;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/712;0.14285714285714285
+fotografie;Conservatieve bewegingen en organisaties;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/973;0.14285714285714285
+fotografie;konzervativní hnutí a organizace;cs;http://data.ehri-project.eu/vocabularies/ehri-terms/973;0.14285714285714285
+fotografie;Konservative Bewegungungen und Organisationen;de;http://data.ehri-project.eu/vocabularies/ehri-terms/973;0.14285714285714285
+fotografie;Forces alliés (toujours au pluriel);fr;http://data.ehri-project.eu/vocabularies/ehri-terms/1078;0.14285714285714285
+fotografie;Rifornimento di carburante;it;http://data.ehri-project.eu/vocabularies/ehri-terms/835;0.14285714285714285
+fotografie;Fotografìï;uk-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/701;0.14285714285714285
+fotografie;Kommunistische Bewegungungen und Organisationen;de;http://data.ehri-project.eu/vocabularies/ehri-terms/969;0.14285714285714285
+fotografie;Communistische bewegingen en organisaties;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/969;0.14285714285714285
+fotografie;komunistické hnutí a organizace;cs;http://data.ehri-project.eu/vocabularies/ehri-terms/969;0.14285714285714285
+fotografie;Movimenti e organizzazioni comuniste;it;http://data.ehri-project.eu/vocabularies/ehri-terms/969;0.14285714285714285
+fotografie;mouvement communiste et organisation communiste;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/969;0.14285714285714285
+fotografie;fašistički pokret i organizacija;sh;http://data.ehri-project.eu/vocabularies/ehri-terms/964;0.14285714285714285
+fotografie;fašistická hnutí a organizace;cs;http://data.ehri-project.eu/vocabularies/ehri-terms/964;0.14285714285714285
+fotografie;Fotografìâ;uk-Latn;http://data.ehri-project.eu/vocabularies/ehri-terms/700;0.14285714285714285
+fotografie;commission d'investigation des crimes de guerre nazis;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/955;0.14285714285714285
+fotografie;politické organizace;cs;http://data.ehri-project.eu/vocabularies/ehri-terms/957;0.14285714285714285
+fotografie;Politieke organisaties;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/957;0.14285714285714285
+fotografie;politike migracije;sh;http://data.ehri-project.eu/vocabularies/ehri-terms/953;0.14285714285714285
+fotografie;Politiche di migrazione;it;http://data.ehri-project.eu/vocabularies/ehri-terms/953;0.14285714285714285
+fotografie;stosunki zagraniczne;pl;http://data.ehri-project.eu/vocabularies/ehri-terms/1022;0.14285714285714285
+fotografie;converti au christianisme / convertie au christianisme;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/803;0.14285714285714285
+fotografie;Cristiani di origini ebraiche;it;http://data.ehri-project.eu/vocabularies/ehri-terms/804;0.14285714285714285
+fotografie;Sozialistische Bewegungungen und Organisationen;de;http://data.ehri-project.eu/vocabularies/ehri-terms/1011;0.14285714285714285
+fotografie;socialistická hnutí a organizace;cs;http://data.ehri-project.eu/vocabularies/ehri-terms/1011;0.14285714285714285
+fotografie;mouvement socialiste et organisation socialiste;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/1011;0.14285714285714285
+fotografie;Socialistische bewegingen en organisaties;nl;http://data.ehri-project.eu/vocabularies/ehri-terms/1011;0.14285714285714285
+fotografie;Movimenti e organizzazioni socialiste;it;http://data.ehri-project.eu/vocabularies/ehri-terms/1011;0.14285714285714285
+fotografie;converti au judaisme / convertie au judaisme;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/802;0.14285714285714285
+fotografie;organisation progressiste;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/1019;0.14285714285714285
+fotografie;occupation hongroise;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/1034;0.14285714285714285
+fotografie;occupation par la Hongrie;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/1034;0.14285714285714285
+fotografie;Disposizioni dell'autorità di occupazione;it;http://data.ehri-project.eu/vocabularies/ehri-terms/1033;0.14285714285714285
+fotografie;groupes locaux du Parti national-socialiste des travailleurs allemands;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/1179;0.14285714285714285
+fotografie;Population transfer;en;http://data.ehri-project.eu/vocabularies/ehri-terms/1173;0.14285714285714285
+fotografie;organisation professionelle;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/919;0.14285714285714285
+fotografie;organizacija koja organizira aliyu u Palestinu (Izrael);sh;http://data.ehri-project.eu/vocabularies/ehri-terms/912;0.14285714285714285
+fotografie;Raccolta di documentazione da parte degli ebrei dopo la guerra;it;http://data.ehri-project.eu/vocabularies/ehri-terms/911;0.14285714285714285
+fotografie;Collection of documentation by Jews after the war;en;http://data.ehri-project.eu/vocabularies/ehri-terms/911;0.14285714285714285
+fotografie;Dokumentensammlung durch Juden nach dem Krieg;de;http://data.ehri-project.eu/vocabularies/ehri-terms/911;0.14285714285714285
+fotografie;zbirka dokumentacije od strane Židova poslije rata;sh;http://data.ehri-project.eu/vocabularies/ehri-terms/911;0.14285714285714285
+fotografie;occupation roumanienne;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/1038;0.14285714285714285
+fotografie;occupation par l'Union des républiques socialistes soviétiques URSS;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/1036;0.14285714285714285
+fotografie;occupation par l'Italie;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/1035;0.14285714285714285
+fotografie;commandant des forces de police allemande du maintien de l'ordre;fr;http://data.ehri-project.eu/vocabularies/ehri-terms/1189;0.14285714285714285
+fotografie;Concern for relatives and friends;en;http://data.ehri-project.eu/vocabularies/ehri-terms/196;0.14285714285714285

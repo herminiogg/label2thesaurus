@@ -19,7 +19,7 @@ sealed trait DistanceOrScoreCalculator {
 
 trait NormalConfidenceCalculator {
   protected def doCalculateConfidence(distance: Int, maxThreshold: Double): Double = {
-    (maxThreshold - distance) / maxThreshold.toDouble * 100.0
+    (maxThreshold - distance) / maxThreshold
   }
 
   protected def doToBeFiltered(distance: Int,  maxThreshold: Double): Boolean = distance < maxThreshold
@@ -27,7 +27,7 @@ trait NormalConfidenceCalculator {
 
 trait InverseConfidenceCalculator {
   protected def doCalculateConfidence(distance: Int, minThreshold: Double): Double = {
-    val confidence = (distance - minThreshold) / minThreshold * 100.0
+    val confidence = (distance - minThreshold) / distance
     if(distance < minThreshold) 0 else confidence
   }
 
