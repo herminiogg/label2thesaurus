@@ -1,11 +1,11 @@
 
 name := "label2thesaurus"
 
-version := "0.1"
+organization := "com.herminiogarcia"
+
+version := "0.1.0"
 
 scalaVersion := "2.13.8"
-
-idePackagePrefix := Some("com.herminiogarcia.label2thesaurus")
 
 libraryDependencies += "org.apache.jena" % "apache-jena-libs" % "3.8.0" pomOnly()
 
