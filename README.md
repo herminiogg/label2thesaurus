@@ -1,11 +1,11 @@
 # label2thesaurus
 This is a library meant to help with the identification and reconciliation of controlled
 vocabulary terms from free text labels based on string similarity algorithms. It returns
-the matches with a confidence interval which supports a semi-supervised entity linking
+the matches with a confidence interval which aims to support a semi-supervised entity linking
 workflow.
 
 # How to start
-In order to run a simple example you should provide two different fields: a list of thesuari in form
+In order to run a simple example you should provide two different fields: a list of thesuari in the form
 of a URL pointing to each of them and a list of terms to be reconciled (place one term or URL per line).
 For example, you can use the labels.txt and thesauri.txt files, that are already provided with the project, using
 the following command:
@@ -43,14 +43,14 @@ to configure a threshold. This threshold operates using a different criteria dep
 different meaning of the outputs.
 
 For distance calculation (excluding LongestCommonSubsequence) the threshold mean the maximum value that a distance result should
-have in order to be returned to the user. In addition, the confidence percentage is calculated as: `(threshold - distance) / threshold`
+have in order to be returned to the user. In addition, the confidence percentage is calculated as: `(threshold - distance) / threshold`.
 In the case of the LongestCommonSubsequence the distance meaning is the inverse as a higher value means greater similarity. Therefore, for this
 algorithm the threshold is the minimum value that a result should return in order to be included and the confidence percentage is
 calculated as: `(distance - minThreshold) / distance`
 
 Score algorithms already give a percentage of confidence so this is taken directly from the algorithm. So, for these
 algorithms the threshold only acts as a value to filter out the values that are under the given limit.
-Take into account that Phonetic similarity algorithms only return true or false, so in these two algorithms the output will be
+Take into account that Phonetic similarity algorithms (Metaphone and Soundex) only return true or false, so for these two algorithms the output will be
 100% or 0%, with the threshold acting in the same behaviour as described for the rest of the score ones.
 
 ### Custom predicates
@@ -108,4 +108,3 @@ val thesaurus = List(new URL("https://portal.ehri-project.eu/vocabularies/ehri_t
 val labels = List("fotografie")
 new Reconciler(threshold, caseSensitive, Option(algorithm), true).reconcile(labels, thesaurus, None)
 ```
-
