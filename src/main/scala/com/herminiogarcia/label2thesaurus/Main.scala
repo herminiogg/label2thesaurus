@@ -20,8 +20,11 @@ object Main {
   description = Array("Links your keywords to existing thesaurus terms based on similarity"))
 class Main extends Callable[Int] {
 
-  @Option(names = Array("-t", "--thesauri"), required = true, description = Array("Path to the file with the list of thesauri"))
+  @Option(names = Array("-t", "--thesauri"), required = false, description = Array("Path to the file with the list of thesauri"))
   private var thesauriPath: String = ""
+
+  @Option(names = Array("-se", "--sparqlEndpoints"), required = false, description = Array("Path to the file with the list of SPARQL endpoints"))
+  private var sparqlEndpointsPath: String = ""
 
   @Option(names = Array("-l", "--labels"), required = true, description = Array("Path to the file with the strings to be reconciled"))
   private var labelsPath: String = ""
@@ -47,23 +50,29 @@ class Main extends Callable[Int] {
 
 
   override def call(): Int = {
-    val thesauri = new FileHandler(thesauriPath).splitByLine().map(new URL(_))
-    val labels = new FileHandler(labelsPath).splitByLine()
-    val alternativePredicatesOption = if(alternativePredicates.isEmpty) None else scala.Option(alternativePredicates)
-    val distanceOrScoreAlgorithm = if(scoreCalculation.isEmpty) {
-      if(distanceCalculation.isEmpty) None else scala.Option(distanceCalculation)
-    } else scala.Option(scoreCalculation)
-    val isScore = scoreCalculation.nonEmpty
-    val finalThreshold = if(threshold == Double.NaN) {
-      if(isScore) 0.5 else 5
-    } else threshold
-    val results = new Reconciler(finalThreshold, caseSensitive, distanceOrScoreAlgorithm, isScore).reconcile(labels.toList, thesauri.toList, alternativePredicatesOption)
-    val printer = new ReconcilerResultsPrinter(results)
-    if(outputPath.isEmpty)
-      printer.toSysOut()
-    else
-      printer.toCSV(outputPath)
-    1 // well finished
+    if(thesauriPath.isEmpty && sparqlEndpointsPath.isEmpty) {
+      System.err.println("Please, provide a file with thesauri URIs or a list of SPARQL endpoints: -t and/or -se")
+      -1
+    } else {
+      val thesauri = if(thesauriPath.isEmpty) List() else new FileHandler(thesauriPath).splitByLine().map(new URL(_))
+      val sparqlEndpoints = if(sparqlEndpointsPath.isEmpty) List() else new FileHandler(sparqlEndpointsPath).splitByLine().map(new URL(_))
+      val labels = new FileHandler(labelsPath).splitByLine()
+      val alternativePredicatesOption = if(alternativePredicates.isEmpty) None else scala.Option(alternativePredicates)
+      val distanceOrScoreAlgorithm = if(scoreCalculation.isEmpty) {
+        if(distanceCalculation.isEmpty) None else scala.Option(distanceCalculation)
+      } else scala.Option(scoreCalculation)
+      val isScore = scoreCalculation.nonEmpty
+      val finalThreshold = if(threshold == Double.NaN) {
+        if(isScore) 0.5 else 5
+      } else threshold
+      val results = new Reconciler(finalThreshold, caseSensitive, distanceOrScoreAlgorithm, isScore).reconcile(labels, thesauri, sparqlEndpoints, alternativePredicatesOption)
+      val printer = new ReconcilerResultsPrinter(results)
+      if(outputPath.isEmpty)
+        printer.toSysOut()
+      else
+        printer.toCSV(outputPath)
+      1 // well finished
+    }
   }
 
 }
