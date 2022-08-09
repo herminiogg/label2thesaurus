@@ -17,7 +17,7 @@ object Main {
 
 @Command(name = "label2thesaurus", version = Array("v0.1.0"),
   mixinStandardHelpOptions = true,
-  description = Array("Links your keywords to existing thesaurus terms based on similarity"))
+  description = Array("Links your keywords to existing thesaurus terms based on string similarity"))
 class Main extends Callable[Int] {
 
   @Option(names = Array("-t", "--thesauri"), required = false, description = Array("Path to the file with the list of thesauri"))
@@ -42,6 +42,9 @@ class Main extends Callable[Int] {
     "Take into account that only rdfs, skos, dcterms, dc and foaf namespaces are included, so to include another namespace predicate you must provide it with the full IRI syntax, e.g.: <http://xmlns.com/foaf/0.1/>"))
   private var alternativePredicates: String = ""
 
+  @Option(names = Array("--sparql"), description = Array("Path to a file with a custom SPARQL query"))
+  private var alternativeSparqlQueryPath: String = ""
+
   @Option(names = Array("-d", "--distance"), description = Array("Algorithm to use for the distance calculation. Available: Levenshtein, Damerau-Levenshtein, Hamming, LongestCommonSubsequence. Default: Levenshtein "))
   private var distanceCalculation: String = ""
 
@@ -58,6 +61,8 @@ class Main extends Callable[Int] {
       val sparqlEndpoints = if(sparqlEndpointsPath.isEmpty) List() else new FileHandler(sparqlEndpointsPath).splitByLine().map(new URL(_))
       val labels = new FileHandler(labelsPath).splitByLine()
       val alternativePredicatesOption = if(alternativePredicates.isEmpty) None else scala.Option(alternativePredicates)
+      val alternativeSparqlOption = if(alternativeSparqlQueryPath.isEmpty) None
+        else scala.Option(new FileHandler(alternativeSparqlQueryPath).getContent())
       val distanceOrScoreAlgorithm = if(scoreCalculation.isEmpty) {
         if(distanceCalculation.isEmpty) None else scala.Option(distanceCalculation)
       } else scala.Option(scoreCalculation)
@@ -65,7 +70,7 @@ class Main extends Callable[Int] {
       val finalThreshold = if(threshold == Double.NaN) {
         if(isScore) 0.5 else 5
       } else threshold
-      val results = new Reconciler(finalThreshold, caseSensitive, distanceOrScoreAlgorithm, isScore).reconcile(labels, thesauri, sparqlEndpoints, alternativePredicatesOption)
+      val results = new Reconciler(finalThreshold, caseSensitive, distanceOrScoreAlgorithm, isScore).reconcile(labels, thesauri, sparqlEndpoints, alternativePredicatesOption, alternativeSparqlOption)
       val printer = new ReconcilerResultsPrinter(results)
       if(outputPath.isEmpty)
         printer.toSysOut()

@@ -10,9 +10,9 @@ import scala.collection.mutable
 
 object ThesaurusManagerFactory {
 
-  def apply(thesaurusURL: ThesaurusURL, alternativePredicates: Option[String], distanceCalculator: DistanceOrScoreCalculator): ThesaurusManager = thesaurusURL match {
-    case FileURL(url) => ThesaurusManagerViaFile(url, alternativePredicates, distanceCalculator)
-    case SPARQLEndpoint(url) => ThesaurusManagerViaSPARQLEndpoint(url, alternativePredicates, distanceCalculator)
+  def apply(thesaurusURL: ThesaurusURL, alternativePredicates: Option[String], alternativeSparql: Option[String], distanceCalculator: DistanceOrScoreCalculator): ThesaurusManager = thesaurusURL match {
+    case FileURL(url) => ThesaurusManagerViaFile(url, alternativePredicates, alternativeSparql, distanceCalculator)
+    case SPARQLEndpoint(url) => ThesaurusManagerViaSPARQLEndpoint(url, alternativePredicates, alternativeSparql, distanceCalculator)
   }
 
 }
@@ -40,11 +40,14 @@ sealed trait ThesaurusManager {
     results.toList
   }
 
-  protected def loadSparqlQuery(alternativePredicates: Option[String]): Query = {
+  protected def loadSparqlQuery(alternativePredicates: Option[String], alternativeSparql: Option[String]): Query = {
     val sparqlResource = loadFromResources("getAllLabels.sparql")
-    val sparql =
-      if(alternativePredicates.isDefined) sparqlResource.replace("$predicates", alternativePredicates.get)
-      else sparqlResource.replace("$predicates", "skos:prefLabel|skos:altLabel")
+    val sparql = alternativeSparql match {
+      case Some(value) => value
+      case None =>
+        if(alternativePredicates.isDefined) sparqlResource.replace("$predicates", alternativePredicates.get)
+        else sparqlResource.replace("$predicates", "skos:prefLabel|skos:altLabel")
+    }
     QueryFactory.create(sparql)
   }
 
@@ -56,7 +59,8 @@ sealed trait ThesaurusManager {
   }
 }
 
-case class ThesaurusManagerViaFile(thesaurusURL: URL, alternativePredicates: Option[String], distanceCalculator: DistanceOrScoreCalculator) extends ThesaurusManager {
+case class ThesaurusManagerViaFile(thesaurusURL: URL, alternativePredicates: Option[String],
+                                   alternativeSparql: Option[String], distanceCalculator: DistanceOrScoreCalculator) extends ThesaurusManager {
 
   private def chargeThesaurusAsModel(): Model = {
     RDFDataMgr.loadModel(thesaurusURL.toString)
@@ -64,17 +68,18 @@ case class ThesaurusManagerViaFile(thesaurusURL: URL, alternativePredicates: Opt
 
   def lookForLabel(label: String, maxThreshold: Double): List[ThesaurusLabelLookupResult] = {
     val model = chargeThesaurusAsModel()
-    val query = loadSparqlQuery(alternativePredicates)
+    val query = loadSparqlQuery(alternativePredicates, alternativeSparql)
     val queryExecution = QueryExecutionFactory.create(query, model)
     doSparqlQuery(label, maxThreshold, queryExecution, distanceCalculator)
   }
 
 }
 
-case class ThesaurusManagerViaSPARQLEndpoint(sparqlEndpoint: URL, alternativePredicates: Option[String], distanceCalculator: DistanceOrScoreCalculator) extends ThesaurusManager {
+case class ThesaurusManagerViaSPARQLEndpoint(sparqlEndpoint: URL, alternativePredicates: Option[String],
+                                             alternativeSparql: Option[String], distanceCalculator: DistanceOrScoreCalculator) extends ThesaurusManager {
 
   def lookForLabel(label: String, maxThreshold: Double): List[ThesaurusLabelLookupResult] = {
-    val query = loadSparqlQuery(alternativePredicates)
+    val query = loadSparqlQuery(alternativePredicates, alternativeSparql)
     val queryExecution = QueryExecutionFactory.sparqlService(sparqlEndpoint.toString, query)
     doSparqlQuery(label, maxThreshold, queryExecution, distanceCalculator)
   }
