@@ -8,14 +8,15 @@ import java.net.{URI, URL}
 
 class Reconciler(maxThreshold: Double, caseSensitive: Boolean, distanceOrScoreAlgorithm: Option[String], isScore: Boolean) {
 
-  def reconcile(labels: List[String], thesaurus: List[URL], sparqlEndpoints: List[URL], alternativePredicates: Option[String]): List[ReconcilerResult] = {
+  def reconcile(labels: List[String], thesaurus: List[URL], sparqlEndpoints: List[URL],
+                alternativePredicates: Option[String], alternativeSparql: Option[String]): List[ReconcilerResult] = {
     val thesaurusURLs = thesaurus.map(FileURL)
     val sparqlEndpointURLs = sparqlEndpoints.map(SPARQLEndpoint)
     (thesaurusURLs ::: sparqlEndpointURLs).flatMap(th => {
       val distanceorScoreCalculator =
         if (!isScore) DistanceCalculatorFactory(distanceOrScoreAlgorithm, caseSensitive)
         else ScoreCalculatorFactory(distanceOrScoreAlgorithm, caseSensitive)
-      val thesaurusManager = ThesaurusManagerFactory(th, alternativePredicates, distanceorScoreCalculator)
+      val thesaurusManager = ThesaurusManagerFactory(th, alternativePredicates, alternativeSparql, distanceorScoreCalculator)
       labels.flatMap(label => {
         val results = thesaurusManager.lookForLabel(label, maxThreshold)
         results.map(r => new ReconcilerResult(label, r.term, r.termLabel, r.lang, r.confidence))
