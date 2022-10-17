@@ -11,7 +11,7 @@ class FileHandler(path: String) {
     content
   }
 
-  def write(content: String) {
+  def write(content: String) = {
     val file = new File(path)
     val bw = new BufferedWriter(new FileWriter(file))
     bw.write(content)

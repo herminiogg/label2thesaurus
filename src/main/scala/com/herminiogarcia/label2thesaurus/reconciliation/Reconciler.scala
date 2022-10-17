@@ -10,8 +10,8 @@ class Reconciler(maxThreshold: Double, caseSensitive: Boolean, distanceOrScoreAl
 
   def reconcile(labels: List[String], thesaurus: List[URL], sparqlEndpoints: List[URL],
                 alternativePredicates: Option[String], alternativeSparql: Option[String]): List[ReconcilerResult] = {
-    val thesaurusURLs = thesaurus.map(FileURL)
-    val sparqlEndpointURLs = sparqlEndpoints.map(SPARQLEndpoint)
+    val thesaurusURLs = thesaurus.map(FileURL.apply)
+    val sparqlEndpointURLs = sparqlEndpoints.map(SPARQLEndpoint.apply)
     (thesaurusURLs ::: sparqlEndpointURLs).flatMap(th => {
       val distanceorScoreCalculator =
         if (!isScore) DistanceCalculatorFactory(distanceOrScoreAlgorithm, caseSensitive)
