@@ -4,7 +4,7 @@ lazy val label2thesaurus = project
   .in(file("."))
   .settings(
     name := "label2thesaurus",
-    version := "0.1.0",
+    version := "0.1.1",
     scalaVersion := "3.2.0",
     crossScalaVersions := Seq("2.12.17", "2.13.9", "3.2.0"),
     libraryDependencies ++= Seq(

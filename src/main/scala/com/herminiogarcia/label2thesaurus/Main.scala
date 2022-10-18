@@ -15,7 +15,7 @@ object Main {
   }
 }
 
-@Command(name = "label2thesaurus", version = Array("v0.1.0"),
+@Command(name = "label2thesaurus", version = Array("v0.1.1"),
   mixinStandardHelpOptions = true,
   description = Array("Links your keywords to existing thesaurus terms based on string similarity"))
 class Main extends Callable[Int] {
