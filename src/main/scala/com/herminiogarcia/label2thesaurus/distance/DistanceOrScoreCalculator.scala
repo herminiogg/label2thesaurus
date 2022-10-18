@@ -2,6 +2,8 @@ package com.herminiogarcia.label2thesaurus.distance
 
 import com.github.vickumar1981.stringdistance.StringDistance.{Cosine, Damerau, DiceCoefficient, Hamming, Jaro, Levenshtein, LongestCommonSeq}
 import com.github.vickumar1981.stringdistance.StringSound.{Metaphone, Soundex}
+import com.github.vickumar1981.stringdistance.DistanceAlgorithm
+import com.github.vickumar1981.stringdistance.{LevenshteinDistance, DamerauLevenshteinDistance, HammingDistance, LongestCommonSeqDistance, CosSimilarityScore, DiceCoefficientScore, JaroScore, MetaphoneScore, SoundexScore}
 
 sealed trait DistanceOrScoreCalculator {
   val caseSensitive: Boolean
