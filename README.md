@@ -63,9 +63,10 @@ using the full IRI syntax. For example, for schema:name we should use: `<https:/
 ```
 Usage: label2thesaurus [-hV] [-cs] [-d=<distanceCalculation>] -l=<labelsPath>
                        [-o=<outputPath>] [-p=<alternativePredicates>]
-                       [-s=<scoreCalculation>] -t=<thesauriPath>
-                       [-th=<threshold>]
-Links your keywords to existing thesaurus terms based on similarity
+                       [-s=<scoreCalculation>] [-se=<sparqlEndpointsPath>]
+                       [--sparql=<alternativeSparqlQueryPath>]
+                       [-t=<thesauriPath>] [-th=<threshold>]
+Links your keywords to existing thesaurus terms based on string similarity
       -cs, --casesensitive   Use case sensitive comparison
   -d, --distance=<distanceCalculation>
                              Algorithm to use for the distance calculation.
@@ -90,6 +91,10 @@ Links your keywords to existing thesaurus terms based on similarity
                                threshold will not be used. Available: Cosine,
                                Damerau-Levenshtein, Dice, Hamming, Jaro,
                                Levenshtein, Metaphone and Soundex
+      -se, --sparqlEndpoints=<sparqlEndpointsPath>
+                             Path to the file with the list of SPARQL endpoints
+      --sparql=<alternativeSparqlQueryPath>
+                             Path to a file with a custom SPARQL query
   -t, --thesauri=<thesauriPath>
                              Path to the file with the list of thesauri
       -th, --threshold=<threshold>
@@ -106,5 +111,5 @@ the Reconciler class and calling the method reconcile (see the example below).
 ```scala
 val thesaurus = List(new URL("https://portal.ehri-project.eu/vocabularies/ehri_terms/export?format=RDF%2FXML"))
 val labels = List("fotografie")
-new Reconciler(threshold, caseSensitive, Option(algorithm), true).reconcile(labels, thesaurus, None)
+new Reconciler(threshold, caseSensitive, Option(algorithm), true).reconcile(labels, thesaurus, None, None, None)
 ```
